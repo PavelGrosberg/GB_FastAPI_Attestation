@@ -8,12 +8,8 @@ class UserIn(BaseModel):
     password: str = Field(min_length=6)
 
 
-class User(BaseModel):
+class User(UserIn):
     id: int
-    first_name: str = Field(max_length=40)
-    last_name: str = Field(max_length=80)
-    email: str = Field(max_length=120)
-    password: str = Field(min_length=6)
 
 
 class ProductIn(BaseModel):
